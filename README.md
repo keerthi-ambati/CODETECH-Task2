@@ -16,6 +16,7 @@
 **PROJECT :** STUDENT GRADE TRACKER
 
 **OUTPUT:**
+![Screenshot 2024-06-18 234016](https://github.com/keerthi-ambati/CODETECH-Task2/assets/139665917/4744eb7d-16ed-40c7-a436-2e770d672477)
 
 **OVERVIEW :**
 
@@ -63,17 +64,27 @@ The program will display the overall average grade, the corresponding letter gra
 **EXAMPLE USAGE :**
 
 Welcome to the Grade Tracker!
+
 Enter subject name (or 'exit' to quit): Math
+
 Enter grade for Math: 95.0
+
 Enter subject name (or 'exit' to quit): English
+
 Enter grade for English: 88.5
+
 Enter subject name (or 'exit' to quit): History
+
 Enter grade for History: 76.0
+
 Enter subject name (or 'exit' to quit): exit
 
+
 Overall Grade: 86.5
+
 Letter Grade: B
+
 GPA: 3.0
-Code Explanation
-The main components of the GradeTracker program are:
+
+
 
