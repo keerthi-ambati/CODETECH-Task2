@@ -86,5 +86,39 @@ Letter Grade: B
 
 GPA: 3.0
 
+**CODE EXPLANATION :**
+
+>The main components of the GradeTracker program are:
+
+>**CONSTANTS:**
+
+A_THRESHOLD, B_THRESHOLD, C_THRESHOLD, and D_THRESHOLD: Define the grade thresholds for letter grades.
+
+**MAIN METHOD:**
+
+Initializes a Scanner object for user input and a HashMap to store subject names and their corresponding grades.
+
+Continuously prompts the user to input subject names and grades until the user types exit.
+
+Includes error handling to ensure valid numeric grades between 0 and 100.
+
+Calculates the total grade and the number of subjects.
+
+Computes the average grade, determines the letter grade, and calculates the GPA.
+
+**Helper Methods:**
+
+getLetterGrade(double grade): Determines the letter grade based on the grade thresholds.
+
+getGPA(double grade): Calculates the GPA based on the grade thresholds.
+
+
+
+
+
+
+
+
+
 
 
