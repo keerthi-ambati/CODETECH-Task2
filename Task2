@@ -1,0 +1,76 @@
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class GradeTracker {
+    private static final double A_THRESHOLD = 90.0;
+    private static final double B_THRESHOLD = 80.0;
+    private static final double C_THRESHOLD = 70.0;
+    private static final double D_THRESHOLD = 60.0;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        HashMap<String, Double> grades = new HashMap<>();
+
+        System.out.println("Welcome to the Grade Tracker!");
+
+        boolean running = true;
+        while (running) {
+            System.out.print("Enter subject name (or 'exit' to quit): ");
+            String subject = scanner.nextLine();
+
+            if (subject.equalsIgnoreCase("exit")) {
+                running = false;
+                break;
+            }
+
+            System.out.print("Enter grade for " + subject + ": ");
+            double grade = scanner.nextDouble();
+            scanner.nextLine(); // consume newline character
+
+            grades.put(subject, grade);
+        }
+
+        double totalGrade = 0.0;
+        int numSubjects = grades.size();
+
+        for (double grade : grades.values()) {
+            totalGrade += grade;
+        }
+
+        double averageGrade = totalGrade / numSubjects;
+        String letterGrade = getLetterGrade(averageGrade);
+        double gpa = getGPA(averageGrade);
+
+        System.out.println("\nOverall Grade: " + averageGrade);
+        System.out.println("Letter Grade: " + letterGrade);
+        System.out.println("GPA: " + gpa);
+    }
+
+    private static String getLetterGrade(double grade) {
+        if (grade >= A_THRESHOLD) {
+            return "A";
+        } else if (grade >= B_THRESHOLD) {
+            return "B";
+        } else if (grade >= C_THRESHOLD) {
+            return "C";
+        } else if (grade >= D_THRESHOLD) {
+            return "D";
+        } else {
+            return "F";
+        }
+    }
+
+    private static double getGPA(double grade) {
+        if (grade >= A_THRESHOLD) {
+            return 4.0;
+        } else if (grade >= B_THRESHOLD) {
+            return 3.0;
+        } else if (grade >= C_THRESHOLD) {
+            return 2.0;
+        } else if (grade >= D_THRESHOLD) {
+            return 1.0;
+        } else {
+            return 0.0;
+        }
+    }
+}
